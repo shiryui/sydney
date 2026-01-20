@@ -1,3 +1,9 @@
+/* ========== GLOBAL STYLES ========== */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Comic Sans MS", cursive, sans-serif;
   background: linear-gradient(135deg, #ffd6e8, #fff0f6);
@@ -8,22 +14,33 @@ body {
 
 .container {
   margin-top: 50px;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.4em;
   color: #ff4d88;
 }
 
 p {
   font-size: 1.2em;
+  color: #444;
 }
+
+a {
+  color: #ff4d88;
+  text-decoration: none;
+}
+
+/* ========== CAT IMAGES ========== */
 
 .cat-img {
   width: 250px;
   border-radius: 20px;
   margin: 20px 0;
 }
+
+/* ========== BUTTONS ========== */
 
 .buttons {
   margin-top: 20px;
@@ -46,13 +63,7 @@ button:hover {
   background-color: #ff5c8a;
 }
 
-.details {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-top: 20px;
-}
+/* ========== GIFT GRID ========== */
 
 .gift-grid {
   display: flex;
@@ -62,35 +73,48 @@ button:hover {
   flex-wrap: wrap;
 }
 
+/* Each clickable gift */
 .gift-card {
-  text-decoration: none;
-  color: #ff4d88;
-  text-align: center;
   width: 200px;
+  text-align: center;
+  color: #ff4d88;
+  transition: transform 0.3s ease;
 }
 
+.gift-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Gift box container */
 .gift-box {
   position: relative;
   width: 200px;
   height: 200px;
 }
 
+/* Gift images */
 .gift-box img {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.4s ease;
   border-radius: 20px;
+  transition: all 0.4s ease;
 }
 
-/* Closed gift visible by default */
+/* Closed gift */
+.gift-closed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Open gift (hidden initially) */
 .gift-open {
   opacity: 0;
-  transform: scale(0.8) translateY(20px);
+  transform: scale(0.85) translateY(20px);
 }
 
-/* Hover animation */
+/* Hover effects */
 .gift-card:hover .gift-closed {
   opacity: 0;
   transform: scale(0.9) rotate(-5deg);
@@ -101,11 +125,18 @@ button:hover {
   transform: scale(1) translateY(0);
 }
 
-.gift-card:hover {
-  transform: translateY(-10px);
-}
-
+/* Gift label */
 .gift-card p {
   margin-top: 15px;
   font-size: 1.1em;
+}
+
+/* ========== DETAILS CARD ========== */
+
+.details {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 20px;
 }
