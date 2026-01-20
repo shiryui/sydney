@@ -1,96 +1,55 @@
 body {
-  font-family: 'Comic Sans MS', cursive;
-  background: linear-gradient(#ffd6e7, #fff);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #fff0f6);
   text-align: center;
-  color: #d6336c;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  margin-top: 60px;
-}
-
-.btn {
-  padding: 15px 30px;
-  margin: 10px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 20px;
-  display: inline-block;
-}
-
-.yes {
-  background: #ff5c8a;
-  color: white;
-}
-
-.no {
-  background: #aaa;
-  color: white;
-}
-
-.cat {
-  width: 200px;
-  margin: 20px;
-}
-
-.cat.small {
-  width: 120px;
-}
-
-.gift-container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
   margin-top: 50px;
 }
 
-.gift-box {
-  width: 140px;
-  height: 140px;
-  position: relative;
+h1 {
+  font-size: 2.5em;
+  color: #ff4d88;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.cat-img {
+  width: 250px;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  font-size: 1.2em;
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
   cursor: pointer;
+  background-color: #ff85a2;
+  color: white;
+  transition: transform 0.2s, background-color 0.2s;
 }
 
-.box {
-  width: 100%;
-  height: 100px;
-  background: #ff6f91;
-  position: absolute;
-  bottom: 0;
-  border-radius: 0 0 10px 10px;
+button:hover {
+  transform: scale(1.1);
+  background-color: #ff5c8a;
 }
 
-.lid {
-  width: 100%;
-  height: 40px;
-  background: #ff3b6f;
-  position: absolute;
-  top: 0;
-  transform-origin: bottom;
-  transition: transform 0.6s ease;
-  border-radius: 10px 10px 0 0;
+.details {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 20px;
 }
-
-.ribbon {
-  width: 20px;
-  height: 100%;
-  background: #fff;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* OPEN ANIMATION */
-.gift-box.open .lid {
-  transform: rotateX(120deg);
-}
-
-.gift-box:hover {
-  animation: wiggle 0.4s ease-in-out infinite alternate;
-}
-
-@keyframes wiggle {
-  from { transform: rotate(-2deg); }
-  to { transform: rotate(2deg); }
-}
-
