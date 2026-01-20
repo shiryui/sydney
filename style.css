@@ -1,142 +1,57 @@
-/* ========== GLOBAL STYLES ========== */
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  background: linear-gradient(135deg, #ffd6e8, #fff0f6);
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(#ffd6e7, #fff);
   text-align: center;
-  margin: 0;
-  padding: 0;
+  color: #d6336c;
 }
 
 .container {
-  margin-top: 50px;
-  padding: 20px;
+  margin-top: 60px;
 }
 
-h1 {
-  font-size: 2.4em;
-  color: #ff4d88;
-}
-
-p {
-  font-size: 1.2em;
-  color: #444;
-}
-
-a {
-  color: #ff4d88;
-  text-decoration: none;
-}
-
-/* ========== CAT IMAGES ========== */
-
-.cat-img {
-  width: 250px;
-  border-radius: 20px;
-  margin: 20px 0;
-}
-
-/* ========== BUTTONS ========== */
-
-.buttons {
-  margin-top: 20px;
-}
-
-button {
-  font-size: 1.2em;
+.btn {
   padding: 15px 30px;
   margin: 10px;
-  border: none;
   border-radius: 30px;
-  cursor: pointer;
-  background-color: #ff85a2;
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.yes {
+  background: #ff5c8a;
   color: white;
-  transition: transform 0.2s, background-color 0.2s;
 }
 
-button:hover {
-  transform: scale(1.1);
-  background-color: #ff5c8a;
+.no {
+  background: #aaa;
+  color: white;
 }
 
-/* ========== GIFT GRID ========== */
+.cat {
+  width: 200px;
+  margin: 20px;
+}
 
-.gift-grid {
+.cat.small {
+  width: 120px;
+}
+
+.gift-container {
   display: flex;
   justify-content: center;
   gap: 40px;
   margin-top: 40px;
-  flex-wrap: wrap;
 }
 
-/* Each clickable gift */
-.gift-card {
-  width: 200px;
-  text-align: center;
-  color: #ff4d88;
-  transition: transform 0.3s ease;
-}
-
-.gift-card:hover {
-  transform: translateY(-10px);
-}
-
-/* Gift box container */
 .gift-box {
-  position: relative;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  background: url('../assets/gifts/box-closed.png') no-repeat center/contain;
+  transition: transform 0.3s, background 0.3s;
 }
 
-/* Gift images */
-.gift-box img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 20px;
-  transition: all 0.4s ease;
-}
-
-/* Closed gift */
-.gift-closed {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Open gift (hidden initially) */
-.gift-open {
-  opacity: 0;
-  transform: scale(0.85) translateY(20px);
-}
-
-/* Hover effects */
-.gift-card:hover .gift-closed {
-  opacity: 0;
-  transform: scale(0.9) rotate(-5deg);
-}
-
-.gift-card:hover .gift-open {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-}
-
-/* Gift label */
-.gift-card p {
-  margin-top: 15px;
-  font-size: 1.1em;
-}
-
-/* ========== DETAILS CARD ========== */
-
-.details {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-top: 20px;
+.gift-box:hover {
+  transform: scale(1.1);
+  background: url('../assets/gifts/box-open.png') no-repeat center/contain;
 }
