@@ -1,7 +1,7 @@
-function openGift(box, link) {
-  box.classList.add("open");
+function yes() {
+  window.location.href = "yes.html";
+}
 
-  setTimeout(() => {
-    window.location.href = link;
-  }, 700);
+function no() {
+  window.location.href = "no.html";
 }
