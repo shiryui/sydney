@@ -85,3 +85,12 @@ body {
   transform: rotateX(120deg);
 }
 
+.gift-box:hover {
+  animation: wiggle 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes wiggle {
+  from { transform: rotate(-2deg); }
+  to { transform: rotate(2deg); }
+}
+
