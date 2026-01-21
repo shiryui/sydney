@@ -19,8 +19,14 @@ p {
   font-size: 1.2em;
 }
 
-.cat-img {
-  width: 1000px;
+.cat-img-large {
+  width: 700px;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.cat-img-regular {
+  width: 350px;
   border-radius: 20px;
   margin: 20px 0;
 }
