@@ -62,3 +62,23 @@ button:hover {
   text-align: left;
   box-shadow: 0 10px 25px rgba(255, 77, 136, 0.25);
 }
+
+.row {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 30px;
+  margin-bottom: 18px;
+}
+
+/* Left column (titles) */
+.label {
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* Right column (details) */
+.value {
+  text-align: left;
+  line-height: 1.5;
+}
