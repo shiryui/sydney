@@ -65,20 +65,32 @@ button:hover {
 
 .row {
   display: grid;
-  grid-template-columns: max-content 1fr;
-  column-gap: 30px;
+  grid-template-columns: 40px max-content 1fr;
+  column-gap: 20px;
   margin-bottom: 18px;
+  align-items: start;
 }
 
-/* Left column (titles) */
+/* Emoji column */
+.emoji {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+/* Label column */
 .label {
   font-weight: bold;
+  color: #ff4d88;
   white-space: nowrap;
   text-align: left;
 }
 
-/* Right column (details) */
+/* Value column */
 .value {
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.row:not(:last-child) {
+  padding-bottom: 8px;
 }
